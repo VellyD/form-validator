@@ -27,7 +27,13 @@
         <!-- Phone number -->
         <div class="form-group">
           <label for="phone">Phone number</label>
-          <input type="tel" id="phone" placeholder="555-555-5555" required />
+          <input
+            type="tel"
+            id="phone"
+            placeholder="555-555-5555"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
         </div>
         <!-- Email -->
         <div class="form-group">
@@ -55,8 +61,10 @@
           <input
             type="password"
             id="password1"
-            placeholder="Create password"
+            placeholder="Create password (Min. 8 Characters)"
+            title="Please include at least one Uppercase character and 1 lowercase character."
             required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
           />
         </div>
         <!-- Confirm password -->
@@ -67,6 +75,7 @@
             id="password2"
             placeholder="Confirm password"
             required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
           />
         </div>
         <!-- Button -->
